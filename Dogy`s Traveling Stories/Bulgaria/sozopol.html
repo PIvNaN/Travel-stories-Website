@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Sozopol/Sozopol 1.jpg" alt="Sozopol">
+            <h1>Sozopol</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Sozopol</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Sozòpol is an ancient seaside town located 35 km south of Burgas on the southern Bulgarian Black Sea Coast. Today it is one of the major seaside resorts in the country, known for the Apollonia art and film festival (which takes place in early September) that is named after one of the town's ancient names.</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The busiest times of the year are the summer months, ranging from May to September as tourists from around the world come to enjoy the weather, sandy beaches, history and culture, fusion cuisine (Balkan, Mediterranean), and atmosphere of the colourful resort.</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Sozopol is one of the oldest towns on Bulgarian Thrace's Black Sea coast. The first settlement on the site dates back to the Bronze Age. Undersea explorations in the region of the port reveal relics of dwellings, ceramic pottery, stone and bone tools from that era. Many anchors from the second and first millennium BC have been discovered in the town's bay, a proof of active shipping since ancient times.</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The current town was founded in the 7th century BC by Greek colonists from Miletus as Antheia. The name was soon changed to Apollonia, on account of a temple dedicated to Apollo in the town, containing a famous colossal statue of the god Apollo by Calamis, 30 cubits high, transported later to Rome by Lucullus and placed in the Capitol.
+                    The coins, which begin in the fourth century BC, bear the name Apollonia and the image of Apollo; the imperial coins, which continue to the first half of the third century AD, and the Tabula Peutinger also contain the name Apollonia; but the "Periplus Ponti Euxini", 85, and the Notitiæ episcopatuum have only the new name Sozopolis. In 1328 Cantacuzene (ed. Bonn, I, 326) speaks of it as a large and populous town. The islet on which it stood is now connected with the mainland by a narrow tongue of land. Its inhabitants, in the past mostly Greeks, lived by fishing and agriculture.</p>
+                <br/>
+                <h3>The vampire of Sozopol</h3>
+                <br/>
+                <p>During archaeological excavations in 2012 the remains of a skeleton pierced with an iron bar in the heart were found. It is believed that those are the remains of the local nobleman Krivich (or Krivitsa), ruler of the fortress of Sozopol (castrofilax). Believed to be a very cruel person, the locals made sure that he would not come back to haunt the city after his death by piercing him with an iron bar in the chest. There are more than 100 medieval funerals similar to that of Krivitsa found all over Bulgaria. The remains were pierced with either an iron or a wooden bar through the chest to make sure that the dead will not rise from the grave as a vampire.</p>
+            </aside>
+
+            <aside class="galery galery-two-rows">
+                  <img class="FP-Img" src="../img/Bulgaria/Sozopol/Raia on the beach.jpg" alt="Dogy on the beach.jpg" />
+                  <img class="FP-Img" src="../img/Bulgaria/Sozopol/Sozopol 2.jpg" alt="Sozopol" />
+                  
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there get-there-two-rows">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var sozopol = {
+                lat: 42.419167,
+                lng: 27.693611
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: sozopol
+            });
+            var marker = new google.maps.Marker({
+                position: sozopol,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

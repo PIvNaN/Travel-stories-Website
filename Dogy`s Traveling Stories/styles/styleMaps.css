@@ -1,0 +1,63 @@
+/*
+CSS for Dogy`s Travel Stories site / tab Maps
+*/
+
+
+/*  Logo  */
+
+.logo img {
+    box-shadow: 3px 4px 15px #666;
+    background: url("../img/Backgrounds/Background-map.jpg");
+}
+
+
+/*   Navigation  */
+
+nav {
+    background-color: rgba(77, 77, 77, 0.2);
+}
+
+a:hover {
+    background-color: rgba(77, 77, 77, 0.2);
+}
+
+
+/*   Body Content  */
+
+section {
+    position: absolute;
+    top: 75px;
+    text-align: center;
+    z-index: 1;
+}
+
+span {
+    color: rgba(218, 165, 32, 1);
+    text-shadow: 1px 2px 5px #666;
+}
+
+section aside {
+    padding: 40px 80px;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+
+
+/*    Mapping    */
+
+#map {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+    background: #888;
+    box-shadow: 1px 2px 20px #333;
+}
+
+/*   Footer  */
+
+footer {
+    top: 700px;
+}

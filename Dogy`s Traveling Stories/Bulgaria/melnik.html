@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Melnik/Melnik 3.jpg" alt="Melnik">
+            <h1 class="main-head-melnik">Melnik</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Melnik</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Melnik is a town in Blagoevgrad Province, southwestern Bulgaria, in the southwestern Pirin Mountains, about 440 m above sea level. The town is an architectural reserve and 96 of its buildings are cultural monuments. With a population of 385, it is the smallest town in Bulgaria, retaining its city status today for historical reasons.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp According to archaeological evidence, the first to settle in the area were the Thracian tribe Medi to which the famous rebel Spartacus belonged. Centuries later, the presence of the Romans left the town one of its landmarks — the Ancient Roman bridge, which is still preserved. The Slavs who later came in these parts named the settlement Melnik after the sand formations surrounding it on all sides (the Bulgarian word мел mel means "white clay, chalk"). Melnik became a part of the First Bulgarian Empire under the rule of Khan Presian I (836-852) and prospered greatly in the period. Melnik became the capital of an independent feudal principality ruled by Despot Alexius Slav, a descendant of the Asen dynasty, in 1209, and passed through an economic and cultural upsurge during his reign. The town continued to flourish under Tsar Ivan Asen II because of the duty-free trade with Venetian-ruled Dubrovnik.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The Ottoman conquest of the Balkans in the 14th-15th century resulted in a long period of decline, but Melnik was once again a thriving city in the 17th and 18th century, the time of the Bulgarian National Revival, due to the tobacco and wine production, with wine being exported abroad, mainly to England and Austria. In that time Melnik was also a centre of craftsmanship, particularly church decoration and woodcarving. Many Bulgarian schools and churches were built in Melnik in that period.</p>
+            </aside>
+
+            <aside class="galery">
+                  <img class="FP-Img" src="../img/Bulgaria/Melnik/Melnik 2.jpg" alt="Melnik" />
+                  <img class="FP-Img" src="../img/Bulgaria/Melnik/Melnik 3.jpg" alt="Melnik" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var melnik = {
+                lat: 41.523333,
+                lng: 23.390833
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: melnik
+            });
+            var marker = new google.maps.Marker({
+                position: melnik,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

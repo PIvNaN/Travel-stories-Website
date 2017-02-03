@@ -1,0 +1,30 @@
+/*
+CSS for Dogy`s Travel Stories site / tab Bulgaria
+*/
+
+/*  Heading  */
+
+h1 {
+    width: 40%;
+    left: 35%
+}
+
+#heading .head-p {
+    top: 480px;
+    left: 47%
+}
+
+
+/*  Logo  */
+
+.logo img {
+    box-shadow: 3px 4px 15px #222;
+}
+
+
+/*  Footer  */
+
+footer {
+    position: absolute;
+    top: 2500px;
+}

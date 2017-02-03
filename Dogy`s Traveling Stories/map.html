@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Map</title>
+    <link href="./styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/styleMaps.css" rel="stylesheet" type="text/css" /> 
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/Logo/Logo.png" alt=""></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Start</a></li>
+                <li><a href="./Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="./Romania/romania.html">Romania</a></li>
+                <li><a href="./map.html" class="active">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <header>
+            <h2>And where will be <span>your</span> next journey...</h2>
+        </header>
+        <aside>
+            <div id="map"></div>
+        </aside>
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="./img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+        <script>
+        function initMap() {
+            var sofia = {
+                lat: 42.698334,
+                lng: 23.319941
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: sofia
+            });
+            var marker = new google.maps.Marker({
+                position: sofia,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

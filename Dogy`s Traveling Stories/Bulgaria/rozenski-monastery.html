@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Rozenski monastery/Rozenski monastery.jpg" alt="Rozenski monastery">
+            <h1 class="main-head-rozenski-monastery">Rozenski monastery</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The Rozhen Monastery of the Nativity of the Mother of God is the biggest monastery in the Pirin Mountains in southwestern Bulgaria. It is one of the few medieval Bulgarian monasteries well preserved until today.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The earliest archaeological evidence of medieval life at the place is a grave with a few coins and decorations from the time of Byzantine Emperor Michael VIII Palaiologos (1259–1282). Some other items also date to the 13th century while the marble frieze above the central gate of the church dates to the 13th or 14th century. A couple of new buildings were constructed in the monastery at the time of Despot Alexius Slav. The earliest written source testifying to the monastery's existence is a note on a chant book from 1551, today in the Great Lavra library on Mount Athos</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The monastery church was built before the 15th century and painted in 1597; some of those frescoes are preserved. In 1611, the south facade was painted. The Rozhen Monastery was devastated by fire between 1662 and 1674, destroying the library and severely damaging most buildings. The monastery was restored over the next century with the financial help of rich Bulgarians from the whole country. The reconstruction began in 1715 and was fully finished in 1732.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The monastery reached its apogee in the 19th century, when it was a regional centre of Orthodox Christianity and owned a lot of land in the area. Famous Bulgarian revolutionary Yane Sandanski's grave is located near the monastery.</p>
+                <br/> 
+            </aside>
+
+            <aside class="galery">
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there get-there-two-rows">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer class="footer-rozen">
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var rozenskiMonastery = {
+                lat: 41.530278,
+                lng: 23.426389
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: rozenskiMonastery
+            });
+            var marker = new google.maps.Marker({
+                position: rozenskiMonastery,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

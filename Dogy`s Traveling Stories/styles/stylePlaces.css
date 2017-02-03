@@ -1,0 +1,91 @@
+/*
+CSS for Dogy`s Travel Stories site / Places
+*/
+
+
+/*  Heading  */
+
+h1 {
+    width: 100%;
+    top: 320px;
+    left: 0;
+    text-align: center;
+}
+
+.main-head-rozenski-monastery {
+    top: 450px;
+}
+
+.main-head-melnik {
+    top: 130px;
+    left: -20%;
+}
+
+
+/*  Galery  */
+
+.galery {
+    top: -140px;
+}
+
+section .galery {
+    padding: 0
+}
+
+section .content {
+    padding: 6% 4% 5% 4%;
+}
+
+
+/*   Mapping   */
+
+.get-there {
+    padding: 15px;
+    padding-top: 100px;
+}
+
+#map {
+    width: 70%;
+    height: 400px;
+    left: 15%;
+    margin-bottom: 30px;
+    background: #888;
+    box-shadow: 1px 2px 20px #333;
+}
+
+
+/*   Places with less images  */
+
+.get-there-belogradchik{
+    padding: 15px;
+    margin-top: -100px;
+}
+
+
+/*   Places with more images  */
+
+.get-there-two-rows {
+    margin-top: -70px;
+}
+
+.get-there h3 {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    font-size: 2rem;
+    color: #555
+}
+
+
+/*   Footer  */
+
+footer {
+    top: 2400px;
+}
+
+.footer-two-rows {
+     top: 3000px;
+}
+
+.footer-rozen {
+    top: 2000px;
+}

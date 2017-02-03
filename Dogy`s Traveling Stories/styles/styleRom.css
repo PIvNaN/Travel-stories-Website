@@ -1,0 +1,38 @@
+/*
+CSS for Dogy`s Travel Stories site / tab Romania
+*/
+
+
+/*  Heading  */
+
+h1 {
+    width: 40%;
+    top: 225px;
+    left: 8%
+}
+
+#heading .head-p {
+    top: 270px;
+    left: 14%
+}
+
+.head-p p {
+    font-size: 1.6rem;
+    color: #f4b727;
+    text-shadow: 2px 2px 12px #222;
+}
+
+
+/*  Logo  */
+
+.logo img {
+    box-shadow: 3px 4px 15px #222;
+}
+
+
+/*    Footer    */
+
+footer {
+    position: absolute;
+    top: 1370px;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Pleven/Panorama - Pleven City.jpg" alt="Panorama - Pleven">
+            <h1>Pleven</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to The Pleven</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Pleven is the seventh most populous city in Bulgaria. Located in the northern part of the country, it is the administrative centre of Pleven Province, as well as of the subordinate Pleven municipality. It is the biggest economic center in Northwestern Bulgaria. At the end of 2015 its population is 99 628.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Internationally known for the Siege of Plevna of 1877, it is today a major economic centre of the Bulgarian Northwest and Central North and the third largest city of Northern Bulgaria after Varna and Rousse.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Pleven is located in an agricultural region in the very heart of the Danubian Plain, the historical region of Moesia, surrounded by low limestone hills, the Pleven Heights. The city's central location in Northern Bulgaria defines its importance as a big administrative, economic, political, cultural and transport centre. Pleven is located 170 kilometres (106 miles) away from the capital city of Sofia, 320 km (199 miles) west of the Bulgarian Black Sea Coast and 50 km (31 miles) south of the Danube.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The earliest traces of human settlement in the area date from the 5th millennium BC, the Neolithic. Numerous archaeological findings, among them the Nikolaevo treasure found in Bulgaria, evidence for the rich culture of the Thracians, who inhabited the area for thousands of years.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp In the beginning of the new era, the region became part of the Roman province of Moesia, and a road station called Storgosia arose near present-day Pleven on the road from Oescus (near modern Gigen) to Philippopolis (now Plovdiv). It later evolved into a fortress. One of the most valued archaeological monuments in Bulgaria from the period is the Early Christian basilica from the fourth century discovered near the modern city.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp During the Middle Ages, Pleven was a well-developed stronghold of the First and the Second Bulgarian Empire. When Slavs populated the region, they gave the settlement its contemporary name Pleven, it was first mentioned in a charter by Hungarian king Stephen V in 1270 in connection to a military campaign in the Bulgarian lands.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Most of the sights of the town are related to the Russo-Turkish War. The monuments related to the war alone are about 200. Some of the more popular include the St George the Conqueror Chapel Mausoleum in honour of the many Russian and Romanian soldiers who lost their lives during the Siege of Plevna and the ossuary in Skobelev Park. Another popular attraction is Pleven Panorama, created after (and reputedly larger than) the Borodino Panorama in Russia on the occasion of the anniversary of the Siege of Plevna.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp A major centre of oil processing, metalworking, machinery construction, of light and food industries in Socialist times. However, the late 1990s and early 2000s saw a revival of light industry[citation needed] and the development of branches such as knitwear and store clothes production. Tourism, which had attracted many people from the Soviet Union prior to 1989, and had experienced a slump in the following years, is on the rise again.</p>
+                <br/> 
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The international railway Sofia — Bucharest — Moscow runs through Pleven. The international road E 83 passes just north of the city. The national A2 Hemus highway Sofia — Varna is projected to pass 16 km (10 mi) south of Pleven. Over 90% of the inner city transportation in Pleven is maintained by trolleybuses. There are 14 trolleybus lines, and 75 km (47 mi) trolleybus network. The trolleybus fleet consist of ZIU-682 (1985–1988) and Skoda 26-TR Solaris trolleybuses, produced in 2014. A project for 12 km (7 mi) trolleybus routes extension is underway. When the extension is completed Pleven will become 100% covered by trolleybus transport.</p>
+            </aside>
+
+            <aside class="galery">
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there get-there-two-rows">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var pleven = {
+                lat: 43.398611,
+                lng: 24.606111
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: pleven
+            });
+            var marker = new google.maps.Marker({
+                position: pleven,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

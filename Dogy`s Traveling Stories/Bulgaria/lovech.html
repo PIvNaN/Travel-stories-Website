@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Lovech/Covered bridge.jpg" alt="Covered bridge - Lovech">
+            <h1>Lovech</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Lovech</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Lovech is a city in north-central Bulgaria. It is the administrative centre of the Lovech Province and of the subordinate Lovech Municipality. The city is located about 150 kilometres (93 miles) northeast from the capital city of Sofia. Near Lovech are the towns of Pleven, Troyan and Teteven.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Lovech is situated in the Forebalkan area of northern Bulgaria, on both sides of the river Osam, and unifies both mountainous and plain relief. The eastern part of the town is surrounded by a 250 m high plateau, where the largest park in Lovech, Stratesh, is located, and the southwestern part is surrounded by the hills Hisarya and Bash Bunar. In the northwest the relief gradually changes to the plains of the neighbouring Pleven Province. The average altitude of Lovech is about 200 m above mean sea level. The highest point of the town is Akbair Hill at 450 m.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp In Stratesh Park, the highest place in the town, there are a great number of lilac bushes, easily seen from the whole town, which are a wonderful view in the spring. Due to this, Lovech is well known as the town of the lilacs.</p>
+            </aside>
+
+            <aside class="galery galery-two-rows">
+                  <img class="FP-Img" src="../img/Bulgaria/Lovech/Lovech fortress.jpg" alt="Lovech fortress" />
+                  <img class="FP-Img" src="../img/Bulgaria/Lovech/Stratesh lake.jpg" alt="Stratesh lake" />
+                  <img class="FP-Img" src="../img/Bulgaria/Lovech/Stratesh monument.jpg" alt="Stratesh monument" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var lovech = {
+                lat: 43.134722,
+                lng: 24.717222
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: lovech
+            });
+            var marker = new google.maps.Marker({
+                position: lovech,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

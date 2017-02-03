@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Romania</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleRom.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Romania/Bucharest/Parliament building.jpg" alt="Parliament building">
+            <h1>Bucharest</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Bucharest</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bucharest is the capital and largest city of Romania, as well as its cultural, industrial, and financial centre. It is located in the southeast of the country, on the banks of the Dâmbovița River, less than 60 km (37.3 mi) north of the Danube River and the Bulgarian border.</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Bucharest was first mentioned in documents in 1459. It became the capital of Romania in 1862 and is the centre of Romanian media, culture, and art. Its architecture is a mix of historical, interbellum, communist-era and modern. In the period between the two World Wars, the city's elegant architecture and the sophistication of its elite earned Bucharest the nickname of "Little Paris". Although buildings and districts in the historic city centre were heavily damaged or destroyed by war, earthquakes, and above all Nicolae Ceaușescu's program of systematization, many survived. In recent years, the city has been experiencing an economic and cultural boom. In 2016, the historical city centre was listed as "endangered" by the World Monuments Watch.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp According to the 2011 census, 1,883,425 inhabitants live within the city limits, a decrease from the 2002 census.The urban area extends beyond the limits of Bucharest proper and has a population of about 1.9 million people. Adding the satellite towns around the urban area, the proposed metropolitan area of Bucharest would have a population of 2.27 million people. According to Eurostat, Bucharest has a larger urban zone of 2,183,091 residents. According to unofficial data, the population is more than 3 million. Bucharest is the sixth-largest city in the European Union by population within city limits, after London, Berlin, Madrid, Rome, and Paris.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Economically, Bucharest is the most prosperous city in Romania and is one of the main industrial centres and transportation hubs of Eastern Europe. The city has big convention facilities, educational institutes, cultural venues, traditional "shopping arcades", and recreational areas.</p>
+            </aside>
+
+            <aside class="galery">
+                  <img class="FP-Img" src="../img/Romania/Bucharest/Museum.jpg" alt="Bucharest - " />
+                  <img class="FP-Img" src="../img/Romania/Bucharest/Parliament building.jpg" alt="Parliament building" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; DDoggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var bucharest = {
+                lat: 44.4325,
+                lng: 26.103889
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: bucharest
+            });
+            var marker = new google.maps.Marker({
+                position: bucharest,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

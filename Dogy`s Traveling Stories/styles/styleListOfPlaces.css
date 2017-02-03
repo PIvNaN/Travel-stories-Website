@@ -1,0 +1,36 @@
+/*
+CSS for Dogy`s Travel Stories site / The List of Places
+*/
+
+
+/*  Galery  */
+
+.galery div {
+    display: inline-block;
+    width: 30%;
+    margin-left: 25px;
+    margin-bottom: 35px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5), 2px 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.galery div a img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.galery img:hover {
+    opacity: 0.8;
+}
+
+
+/*  Body Content  */
+
+.container p {
+    text-align: center;
+    padding-bottom: 4px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Romania</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleRom.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Romania/Peles/Peles Castles 1.jpg" alt="Peles Castles">
+            <h1>Peles</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Peles</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp A castles from the dreams, wonderful stories and different people - that you can see there - in Peles.</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Peles Castle is a Neo-Renaissance castle in the Carpathian Mountains, near Sinaia, in Prahova County, Romania, on an existing medieval route linking Transylvania and Wallachia, built between 1873 and 1914. Its inauguration was held in 1883. It was constructed for King Carol I.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp When the King Carol I of Romania (1839–1914), under whose reign the country gained its independence, first visited the site of the future castle in 1866, he fell in love with the magnificent mountain scenery. In 1872, the Crown purchased 1,300 square kilometres (500 sq mi) of land near the Piatra Arsă River. The estate was named the Royal Estate of Sinaia. The King commissioned the construction of a royal hunting preserve and summer retreat on the property, and the foundation was laid for Peleș Castle on 22 August 1873. Several auxiliary buildings were built simultaneously with the castle: the guards' chambers, the Economat Building, the Foişor hunting lodge, the royal stables, and a power plant. Peles became the world's first castle fully powered by locally produced electricity.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The cost of the work on the castle undertaken between 1875 and 1914 was estimated to be 16,000,000 Romanian lei in gold (approx. US$ 120 million today). Between three and four hundred men worked on the construction. Queen Elisabeth of the Romanians, during the construction phase, wrote in her journal:</p>
+                <blockquote>
+                    <p>“Italians were masons, Romanians were building terraces, the Gypsies were coolies. Albanians and Greeks worked in stone, Germans and Hungarians were carpenters. Turks were burning brick. Engineers were Polish and the stone carvers were Czech. The Frenchmen were drawing, the Englishmen were measuring, and so was then when you could see hundreds of national costumes and fourteen languages in which they spoke, sang, cursed and quarreled in all dialects and tones, a joyful mix of men, horses, cart oxen and domestic buffaloes.”</p>
+                </blockquote>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The complex is northwest of the town of Sinaia, which is 60 kilometres (37 mi) from Braşov and 135 kilometres (84 mi) from Bucharest. Nestled in the southeastern Carpathian Mountains, the complex is composed of three monuments: Peleş Castle, Pelişor Chateau, and Foişor Hunting Lodge.</p>
+            </aside>
+
+            <aside class="galery">
+                  <img class="FP-Img" src="../img/Romania/Peles/Peles Castles 1.jpg" alt="Peles Castles" />
+                  <img class="FP-Img" src="../img/Romania/Peles/Peles Castles 2.jpg" alt="Peles Castles" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var peles = {
+                lat: 45.359722,
+                lng: 25.542778
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: peles
+            });
+            var marker = new google.maps.Marker({
+                position: peles,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

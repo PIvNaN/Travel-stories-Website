@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Romania</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleRom.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Romania/Bran/Bran Castle.jpg" alt="Bran Castle">
+            <h1>Bran Castle</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Bran Castle</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The medieval Bran Castle, which was once besieged by Vlad the Impaler, is a popular tourist destination, partly because it resembles the home of Dracula in Bram Stoker's famous novel.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp The Teutonic Order began construction of a wooden fort known as Dietrichstein in the early 13th century. After the fort's destruction in 1242 by Mongols, King Sigismund of Hungary ordered the construction of a stone castle in 1377, while the settlement of Bran began to develop nearby. Positioned high atop a steep cliff, the castle guarded a strategic trade route between Transylvania and Wallachia. In 1498, Bran fell under the jurisdiction of Brasov.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp After the Kingdom of Hungary was defeated by the Ottoman Empire, Bran became part of the Principality of Transylvania during the 16th century, and eventually passed to the Habsburg Monarchy of Austria. The commune became part of the Austrian Empire in 1804 and the Austro-Hungarian Empire in 1866. It was added to the Kingdom of Romania following World War I.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Bran Castle is one of Romania's most popular visitor sites, made famous in modern times when Queen Marie restored it after receiving it from the residents of Brașov County in the 1920s. The castle is open to tourists, who can view the inside alone or as part of a guided tour. Outside the castle are examples of traditional Romanian farm houses and peasant homes.</p>
+            </aside>
+
+            <aside class="galery">
+                  <img class="FP-Img" src="../img/Romania/Bran/Bran Castle.jpg" alt="Bran Castle" />
+                  <img class="FP-Img" src="../img/Romania/Bran/Bran Castle 2.jpg" alt="Bran Castle" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var bran = {
+                lat: 45.516111,
+                lng: 25.369444
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: bran
+            });
+            var marker = new google.maps.Marker({
+                position: bran,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doggy`s Traveling Stories - Bulgaria</title>
+    <link href="../styles/styleMain.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleBul.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styleGalery.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/stylePlaces.css" rel="stylesheet" type="text/css" />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/Logo/Logo.png" alt="Logo"></a>
+        </div>
+        <!-- end of logo div -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="../Bulgaria/bulgaria.html">Bulgaria</a></li>
+                <li><a href="../Romania/romania.html">Romania</a></li>
+                <li><a href="../map.html">Map</a></li>
+            </ul>
+        </nav>
+        <div id="heading">
+            <img src="../img/Bulgaria/Botev peak/Botev peak 7.jpg" alt="Botev peak">
+            <h1>Botev peak</h1>
+        </div>
+    <!-- end of heading div -->
+    </header>
+
+    <section>
+        <header>
+            <h2>Welcome to Botev peak</h2>
+        </header>
+          
+            <aside class="content">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Botev Peak is, at 2,376 metres (7,795 ft) above sea level, the highest peak of the Balkan Mountains. It is located close to the geographic centre of Bulgaria, and is part of the Central Balkan National Park.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp Until 1950, when it was renamed in honour of Bulgarian poet and revolutionary Hristo Botev, the peak was called Yumrukchal - from Ottoman Turkish Yumrukçal, 'a fist-like peak'.</p>
+                <br/>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp "Botev Peak" is the main facility of Bulgarian FM and TV broadcasting network. The situation at the top near the geographical center of Bulgaria contribute to national radio broadcasts and television broadcast here to cover more than 65% throughout the country, also in parts of Romania and Turkey.</p>
+            </aside>
+
+            <aside class="galery galery-two-rows">
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 1.jpg" alt="Botev peak" />
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 2.jpg" alt="Botev peak" />
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 3.jpg" alt="Botev peak" />
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 4.jpg" alt="Botev peak" />
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 5.jpg" alt="Botev peak" />
+                  <img class="FP-Img" src="../img/Bulgaria/Botev peak/Botev peak 6.jpg" alt="Botev peak" />
+
+                  <div id="FP-Modal" class="modal">
+
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
+
+                  </div>
+            </aside>
+        
+            <aside class="get-there get-there-two-rows">
+                <h3>How to get there..?! </h3>
+                <div id="map"></div>
+            </aside>
+         
+    </section>
+    <!-- end of body content -->
+
+    <footer>
+        <div class="footer-imgs">
+            <img src="../img/Footer/paws.png" alt="paws">
+        </div>
+        <div class="footer-paragraphs">
+            <p class="main-footer-p"><em>The true story of a Dog which <br/> traveling with Love, Passion and Emotion.</em></p>
+            <p><em>&copy; Doggy`s Traveling Stories 2017 <br> Website about traveling.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        let modal = document.getElementById('FP-Modal');
+        let galerian = document.getElementsByClassName("FP-Img");
+
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        for (let i = 0; i < galerian.length; i += 1) {
+            let img = document.getElementsByClassName("FP-Img")[i];
+            var modalImg = document.getElementById("image");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function initMap() {
+            var botevPeak = {
+                lat: 42.716667,
+                lng: 24.933333
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: botevPeak
+            });
+            var marker = new google.maps.Marker({
+                position: botevPeak,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDui1PT9sSvWG1hLHVg0Bb8hkNNV9BEN_0&callback=initMap">
+    </script>
+
+</body>
+
+</html>
